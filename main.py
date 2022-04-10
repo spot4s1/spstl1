@@ -45,7 +45,7 @@ def get_single_song(bot, update):
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl {url} --st 12 --dt 8')
+        os.system(f'spotdl {url} --st 12 --dt 8 --output-format flac')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
@@ -55,7 +55,7 @@ def get_single_song(bot, update):
     try:
         sent = 0 
         bot.send_message(chat_id=chat_id, text="Sending to You...")
-        files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
+        files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.flac']
         for file in files:
             bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=1000)
             sent += 1
