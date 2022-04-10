@@ -1,7 +1,7 @@
 {
   "AUTH": {
-    "ENABLE": true,
-    "PASSWORD": "evsp1989@",
+    "ENABLE": false,
+    "PASSWORD": "",
     "USERS": []
   },
   "SPOTDL_DOWNLOADER": true,
