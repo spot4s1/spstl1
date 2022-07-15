@@ -45,7 +45,7 @@ def get_single_song(bot, update):
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl {url} --st 10 --dt 75')
+        os.system(f'spotdl {url} --st 10 --dt 16')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
@@ -92,6 +92,6 @@ def authenticate(bot, update):
 handler = MessageHandler(Filters.text, get_single_song_handler)
 dispatcher.add_handler(handler=handler)
 
-POLLING_INTERVAL = 2.8
+POLLING_INTERVAL = 0.8
 updater.start_polling(poll_interval=POLLING_INTERVAL)
 updater.idle()
