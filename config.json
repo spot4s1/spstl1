@@ -1,7 +1,7 @@
 {
   "AUTH": {
     "ENABLE": true,
-    "PASSWORD": "irsp",
+    "PASSWORD": "musicdl",
     "USERS": []
   },
   "SPOTDL_DOWNLOADER": true,
