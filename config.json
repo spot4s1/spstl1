@@ -1,6 +1,6 @@
 {
   "AUTH": {
-    "ENABLE": false,
+    "ENABLE": true,
     "PASSWORD": "musicdl",
     "USERS": []
   },
