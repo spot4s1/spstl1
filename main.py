@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+from scrapy import cmdline
+cmdline.execute('scrapy crawl test'.split())#test is the crawler name
+
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 import json
