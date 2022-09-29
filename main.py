@@ -50,7 +50,7 @@ def get_single_song(bot, update):
     if config["SPOTDL_DOWNLOADER"]:
         os.system(f'spotdl {url}')
     elif config["SPOTIFYDL_DOWNLOADER"]:
-        os.system(f'spotifydl {url} --st 10 --dt 75')
+        os.system(f'spotifydl {url} --st 10 --dt 32 --output-format mp3')
     else:
         logging.log(logging.ERROR, 'you should select one of downloaders')
 
@@ -95,6 +95,6 @@ def authenticate(bot, update):
 handler = MessageHandler(Filters.text, get_single_song_handler)
 dispatcher.add_handler(handler=handler)
 
-POLLING_INTERVAL = 0.8
+POLLING_INTERVAL = 0.3
 updater.start_polling(poll_interval=POLLING_INTERVAL)
 updater.idle()
