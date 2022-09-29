@@ -50,7 +50,7 @@ def get_single_song(bot, update):
     if config["SPOTDL_DOWNLOADER"]:
         os.system(f'spotdl {url}')
     elif config["SPOTIFYDL_DOWNLOADER"]:
-        os.system(f'spotifydl {url} --st 10 --dt 8 --output-format mp3')
+        os.system(f'spotifydl {url} --st 10 --dt 32 --output-format mp3')
     else:
         logging.log(logging.ERROR, 'you should select one of downloaders')
 
