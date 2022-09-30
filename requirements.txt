@@ -1,7 +1,7 @@
 python-telegram-bot==12.3.0
 python-dotenv==0.19.2
 pip==22.2.2
-python-ffmpeg
+static-ffmpeg==2.3
 spotdl==3.9.6
 pytube
 ytmusicapi
