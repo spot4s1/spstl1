@@ -1,7 +1,8 @@
-python-telegram-bot
-spotdl
+python-telegram-==bot12.3.0
+spotdl==3.9.6
 python-dotenv
 numpy
 pandas
 ffmpeg-python
 streamlit
+pip==22.2.2
