@@ -1,11 +1,9 @@
-import ffmpeg-downloader
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 import json
 import logging
 import os
 from dotenv import dotenv_values
-import spotipy
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
