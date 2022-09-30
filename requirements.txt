@@ -1,5 +1,5 @@
 python-telegram-bot==12.3.0
-pytube==12.1.0
+pytube
 spotdl==3.9.6
 python-dotenv
 numpy
