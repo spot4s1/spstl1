@@ -1,5 +1,6 @@
 import os
 os.system('python run.py')#The file to start the crawler project
+
 import ffmpeg
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
@@ -7,6 +8,9 @@ import json
 import logging
 import os
 from dotenv import dotenv_values
+import youtube_dl
+import tempfile
+import requests
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
@@ -24,16 +28,16 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater(token)
+updater = Updater('token', use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(bot, update):
+def get_single_song_handler(update, bot):
     if config["AUTH"]["ENABLE"]:
-        authenticate(bot, update)
-    get_single_song(bot, update)
+        authenticate(update, bot)
+    get_single_song(update, bot)
 
 
-def get_single_song(bot, update):
+def get_single_song(update, bot):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -41,14 +45,14 @@ def get_single_song(bot, update):
 
     url = "'" + update.effective_message.text + "'"
 
-    os.system(f'mkdir -p .temp{message_id}{chat_id}')
+    os.system(with tempfile.TemporaryDirectory() as .temp{message_id}{chat_id}')
     os.chdir(f'./.temp{message_id}{chat_id}')
 
     logging.log(logging.INFO, f'start downloading')
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl {url} --st 10 --dt 32 --ignore-ffmpeg-version --output-format mp3')
+        os.system(f'spotdl {url} --st 10 --dt 32 --output-format mp3')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
@@ -76,7 +80,7 @@ def get_single_song(bot, update):
 
 
 
-def authenticate(bot, update):
+def authenticate(update, bot):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
