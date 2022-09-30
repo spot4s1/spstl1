@@ -1,4 +1,4 @@
-import ffmpeg
+import static-ffmpeg
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 import json
@@ -93,6 +93,6 @@ def authenticate(bot, update):
 handler = MessageHandler(Filters.text, get_single_song_handler)
 dispatcher.add_handler(handler=handler)
 
-POLLING_INTERVAL = 2.8
+POLLING_INTERVAL = 0.2
 updater.start_polling(poll_interval=POLLING_INTERVAL)
 updater.idle()
