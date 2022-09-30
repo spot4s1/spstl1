@@ -9,4 +9,4 @@ requests
 ffmpeg
 yt-dlp==2022.9.1
 youtube_dl
-git+http://http.us.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.3.4-0+deb11u1_amd64.deb
+git+https://tracker.debian.org/media/packages/f/ffmpeg/control-75.1.1-2
