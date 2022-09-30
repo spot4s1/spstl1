@@ -1,5 +1,3 @@
-import os
-os.system('python run.py')#The file to start the crawler project
 import ffmpeg
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
