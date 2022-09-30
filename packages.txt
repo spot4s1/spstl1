@@ -1,3 +1,6 @@
 ffmpeg
 libav-tools
 libavcodec-extra
+npm
+gcc
+curl
