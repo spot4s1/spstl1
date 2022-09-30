@@ -8,4 +8,4 @@ youtube-dl
 spotipy
 youtube_dl
 requests
-static-ffmpeg
+ffmpeg
