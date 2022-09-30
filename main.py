@@ -1,6 +1,5 @@
 import os
 os.system('python run.py')#The file to start the crawler project
-
 import ffmpeg
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
@@ -8,9 +7,7 @@ import json
 import logging
 import os
 from dotenv import dotenv_values
-import youtube_dl
-import tempfile
-import requests
+import spotipy
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
@@ -28,16 +25,16 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater('token', use_context=True)
+updater = Updater(token)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update, bot):
+def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
-        authenticate(update, bot)
-    get_single_song(update, bot)
+        authenticate(bot, update)
+    get_single_song(bot, update)
 
 
-def get_single_song(update, bot):
+def get_single_song(bot, update):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -45,7 +42,7 @@ def get_single_song(update, bot):
 
     url = "'" + update.effective_message.text + "'"
 
-    os.system(with tempfile.TemporaryDirectory() as .temp{message_id}{chat_id}')
+    os.system(f'mkdir -p .temp{message_id}{chat_id}')
     os.chdir(f'./.temp{message_id}{chat_id}')
 
     logging.log(logging.INFO, f'start downloading')
@@ -80,7 +77,7 @@ def get_single_song(update, bot):
 
 
 
-def authenticate(update, bot):
+def authenticate(bot, update):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
