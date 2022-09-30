@@ -1,1 +1,1 @@
-pip install https://debian.pkgs.org/11/debian-main-arm64/ffmpeg_4.3.4-0+deb11u1_arm64.deb
+Git+https://salsa.debian.org/multimedia-team/ffmpeg.git
