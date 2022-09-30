@@ -1,1 +1,1 @@
-static-ffmpeg
+ffmpeg-gui
