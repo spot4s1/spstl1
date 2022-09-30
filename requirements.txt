@@ -6,7 +6,6 @@ pytube
 ytmusicapi
 spotipy
 requests
-static-ffmpeg
+ffmpeg
 yt-dlp==2022.9.1
 youtube_dl
-streamlit
