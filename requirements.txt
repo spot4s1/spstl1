@@ -10,4 +10,3 @@ requests
 yt-dlp==2022.9.1
 youtube_dl
 ffmpeg
-git
