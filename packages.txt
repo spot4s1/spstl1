@@ -1,1 +1,1 @@
-git+https://tracker.debian.org/media/packages/f/ffmpeg/control-75.1.1-2
+git+https://github.com/q3aql/ffmpeg-builds/releases/download/v5.1.1/ffmpeg-5.1.1-linux-gnu-64bit-build.deb
