@@ -1,1 +1,1 @@
-git+https://github.com/q3aql/ffmpeg-builds/releases/download/v5.1.1/ffmpeg-5.1.1-linux-gnu-64bit-build.deb
+git+https://salsa.debian.org/multimedia-team/ffmpeg.git
