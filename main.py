@@ -1,3 +1,4 @@
+import streamlit
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 import json
