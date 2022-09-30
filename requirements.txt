@@ -9,3 +9,4 @@ spotipy
 youtube_dl
 requests
 ffmpeg
+certifi
