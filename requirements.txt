@@ -1,7 +1,7 @@
 python-telegram-bot==12.3.0
 python-dotenv==0.19.2
 pip==22.2.2
-pip install https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-4.2.2-amd64-static.tar.xz
+ffmpeg-downloader==0.1.4
 spotdl==3.9.6
 pytube
 ytmusicapi
