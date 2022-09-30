@@ -7,6 +7,6 @@ pytube
 ytmusicapi
 youtube-dl
 spotipy
-tempfile
+tempfile2
 youtube_dl
 requests
