@@ -20,4 +20,4 @@ libpostproc55
 libsdl2-2.0-0
 libswresample3
 libswscale5
-git+https://salsa.debian.org/multimedia-team/ffmpeg.git
+git+https://github.com/Franky1/Streamlit-ffmpeg-Test
