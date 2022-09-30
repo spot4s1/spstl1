@@ -4,9 +4,8 @@ pip==22.2.2
 spotdl==3.9.6
 pytube
 ytmusicapi
-youtube-dl
 spotipy
-youtube_dl
 requests
 ffmpeg
 certifi
+yt-dlp==2022.01.21
