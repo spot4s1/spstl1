@@ -1,1 +1,1 @@
-ffmpeg_4.3.4-0+deb11u1_amd64.deb
+ffmpeg_4.3.4
