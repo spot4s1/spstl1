@@ -8,4 +8,4 @@ spotipy
 requests
 ffmpeg
 certifi
-yt-dlp==2022.01.21
+yt-dlp==2022.9.1
