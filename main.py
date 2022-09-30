@@ -5,6 +5,9 @@ import json
 import logging
 import os
 from dotenv import dotenv_values
+import youtube_dl
+import tempfile
+import requests
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
@@ -39,7 +42,7 @@ def get_single_song(update, bot):
 
     url = "'" + update.effective_message.text + "'"
 
-    os.system(f'mkdir -p .temp{message_id}{chat_id}')
+    os.system(with tempfile.TemporaryDirectory() as .temp{message_id}{chat_id}')
     os.chdir(f'./.temp{message_id}{chat_id}')
 
     logging.log(logging.INFO, f'start downloading')
