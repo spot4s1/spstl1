@@ -1,1 +1,1 @@
-ffmpeg-gui
+heroku-buildpack-ffmpeg-latest
