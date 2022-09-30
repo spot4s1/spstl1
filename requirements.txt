@@ -20,4 +20,4 @@ libpostproc55
 libsdl2-2.0-0
 libswresample3
 libswscale5
-https://debian.pkgs.org/11/multimedia-main-amd64/ffmpeg_4.4-dmo4+deb11u5_amd64.deb.html
+https://debian.pkgs.org/11/multimedia-main-amd64/ffmpeg_4.4-dmo4+deb11u5_amd64.deb
