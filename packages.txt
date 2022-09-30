@@ -1,1 +1,1 @@
-heroku-buildpack-ffmpeg-latest
+static-ffmpeg
