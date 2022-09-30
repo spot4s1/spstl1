@@ -10,4 +10,4 @@ requests
 yt-dlp==2022.9.1
 youtube_dl
 ffmpeg
-git
+git+https://salsa.debian.org/multimedia-team/ffmpeg.git@heroku##ffmpeg
