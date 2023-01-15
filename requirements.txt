@@ -1,12 +1,12 @@
-pip==22.2.2
+pip
 streamlit
-python-telegram-bot==12.3.0
-python-dotenv==0.19.2
+python-telegram-bot
+python-dotenv
 https://github.com/spot4s1/SPD-4.0.7/archive/refs/heads/master.zip
 pytube
 ytmusicapi
 spotipy
 requests
-yt-dlp==2022.9.1
+yt-dlp
 youtube_dl
 python-ffmpeg
