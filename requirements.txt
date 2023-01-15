@@ -2,7 +2,7 @@ pip==22.2.2
 streamlit
 python-telegram-bot==12.3.0
 python-dotenv==0.19.2
-spotdl==4.0.7
+https://github.com/spot4s1/SPD-4.0.7/archive/refs/heads/master.zip
 pytube
 ytmusicapi
 spotipy
