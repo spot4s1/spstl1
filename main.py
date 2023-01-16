@@ -20,6 +20,8 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
+os.system(f'spotdl --download-ffmpeg')
+
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
