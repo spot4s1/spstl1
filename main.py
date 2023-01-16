@@ -8,6 +8,8 @@ from dotenv import dotenv_values
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
+os.system(f'spotdl --download-ffmpeg')
+
 with open("config.json", "r") as read_file:
     config = json.load(read_file)
 
@@ -19,11 +21,8 @@ try:
     token = dotenv_values(".env")["TELEGRAM_TOKEN"]
 except:
     token = os.environ['TELEGRAM_TOKEN']
-
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
-
-os.system(f'spotdl --download-ffmpeg')
 
 def get_single_song_handler(update, context):
     if config["AUTH"]["ENABLE"]:
