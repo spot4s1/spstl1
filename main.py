@@ -20,8 +20,6 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-os.system(f'spotdl --download-ffmpeg')
-
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
@@ -46,7 +44,7 @@ def get_single_song(update, context):
     context.bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl download {url} --threads 12 --format mp3 --bitrate 320k')
+        os.system(f'spotdl download {url} --threads 12 --format mp3 --bitrate 320k --ffmpeg /home/mrkk68w/.spotdl/ffmpeg')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
