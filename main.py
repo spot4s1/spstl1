@@ -23,6 +23,8 @@ except:
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
+os.system(f'spotdl --download-ffmpeg')
+
 def get_single_song_handler(update, context):
     if config["AUTH"]["ENABLE"]:
         authenticate(update, context)
