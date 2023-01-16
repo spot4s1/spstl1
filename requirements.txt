@@ -1,6 +1,6 @@
 pip
 streamlit
-python-telegram-bot
+python-telegram-bot==13.14
 python-dotenv
 https://github.com/spot4s1/SPD-4.0.7/archive/refs/heads/master.zip
 pytube
