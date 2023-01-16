@@ -8,8 +8,6 @@ from dotenv import dotenv_values
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
-os.system(f'spotdl --download-ffmpeg')
-
 with open("config.json", "r") as read_file:
     config = json.load(read_file)
 
@@ -45,7 +43,7 @@ def get_single_song(update, context):
     context.bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl download {url} --threads 8 --format mp3 --bitrate 320k')
+        os.system(f'spotdl download {url} --threads 20 --format mp3 --bitrate 320k')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
@@ -92,6 +90,6 @@ def authenticate(update, context):
 handler = MessageHandler(Filters.text, get_single_song_handler)
 dispatcher.add_handler(handler=handler)
 
-POLLING_INTERVAL = 0.001
+POLLING_INTERVAL = 0.2
 updater.start_polling(poll_interval=POLLING_INTERVAL)
 updater.idle()
